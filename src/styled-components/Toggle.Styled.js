@@ -40,5 +40,4 @@ export const Circle = styled.div`
     background-color: white;
     margin-left: ${({mLeft}) => mLeft};
     transition: .2s;
-    
 `

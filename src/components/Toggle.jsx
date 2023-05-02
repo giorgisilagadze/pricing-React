@@ -8,9 +8,7 @@ import {
   Circle,
 } from "../styled-components/Toggle.Styled";
 
-export default function Toggle() {
-  const [isMonth, setIsMonth] = useState(true);
-
+export default function Toggle({ isMonth, setIsMonth }) {
   return (
     <>
       <Title>Our Pricing</Title>
