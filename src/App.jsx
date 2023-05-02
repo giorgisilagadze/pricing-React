@@ -1,9 +1,11 @@
-import { GlobalStyled } from "./styled-components/GLobal.Styled.js";
+import { GlobalStyled } from "./styled-components/Global.Styled.js";
+import Toggle from "./components/Toggle.jsx";
 
 function App() {
   return (
     <>
       <GlobalStyled />
+      <Toggle />
     </>
   );
 }
