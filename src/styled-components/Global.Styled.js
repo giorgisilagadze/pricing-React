@@ -21,7 +21,8 @@ export const GlobalStyled = createGlobalStyle`
 
 
         @media(min-width: 1440px) {
-            background-position: top -20px right -50px, bottom -300px left -100px;
+            background-position: top 0px right 0px, bottom 0px left 0px;
+            overflow: hidden;
         }
     }
 
