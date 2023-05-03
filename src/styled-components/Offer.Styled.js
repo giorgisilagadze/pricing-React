@@ -6,6 +6,14 @@ export const MainDiv = styled.div`
     margin: 80px auto 0px;
     padding: 0px 24px 71px;
 
+    @media(min-width: 1440px) {
+        width: 100%;
+        margin-top: 64px;
+        padding: 0px 195px 103px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 export const OfferDiv = styled.div`
@@ -15,6 +23,12 @@ export const OfferDiv = styled.div`
     border-radius: 10px;
     background: ${({bg}) => bg};
     margin-top: 32.5px;
+
+    @media(min-width: 1440px) {
+        width: 350px;
+        margin-top: 0px;
+        padding: ${({pad}) => pad} 31px;
+    }
 `
 
 export const OfferTitle = styled.h1`
@@ -72,4 +86,15 @@ export const Butt = styled.button`
     line-height: 15.85px;
     letter-spacing: 1.39px;
     color: ${({cl}) => cl};
+
+    @media(min-width: 1440px) {
+        cursor: pointer;
+
+        &:hover {
+            background: none;
+            border: 1px solid ${({border}) => border};
+            color: ${({clHover}) => clHover};
+        }
+
+    }
 `

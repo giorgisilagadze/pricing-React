@@ -6,6 +6,10 @@ export const Title = styled.h1`
     text-align: center;
     color: #6E728E;
     margin-top: 64px;
+
+    @media(min-width: 1440px) {
+        margin-top: 71px;
+    }
 `
 
 export const Container = styled.div`
@@ -31,6 +35,14 @@ export const ToggleDiv = styled.div`
     border-radius: 16px;
     padding: 4px;
     background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+
+    @media(min-width: 1440px) {
+        cursor: pointer;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
 `
 
 export const Circle = styled.div`

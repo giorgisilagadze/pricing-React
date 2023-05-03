@@ -17,7 +17,12 @@ export const GlobalStyled = createGlobalStyle`
         background-color: #F2F2F2;
         background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
         background-repeat: no-repeat;
-        background-position: top -20px left 200px, bottom -300px right 200px;
+        background-position: top -20px right -200px, bottom -300px left -350px;
+
+
+        @media(min-width: 1440px) {
+            background-position: top -20px right -50px, bottom -300px left -100px;
+        }
     }
 
 

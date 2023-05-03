@@ -46,6 +46,7 @@ export default function Offer({ isMonth, setIsMonth }) {
                 ? "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
                 : "#FFFFFF"
             }
+            pad={index === 1 ? "54.5px" : "31px"}
           >
             <OfferTitle cl={index === 1 ? "#FFFFFF" : "#6E728E"}>
               {item.title}
@@ -72,6 +73,8 @@ export default function Offer({ isMonth, setIsMonth }) {
                   : "#FFFFFF"
               }
               cl={index === 1 ? "#6D72DE" : "#FFFFFF"}
+              border={index === 1 ? "#FFFFFF" : "#6D72DE"}
+              clHover={index === 1 ? "#FFFFFF" : "#6D72DE"}
             >
               {item.butt}
             </Butt>
