@@ -34,47 +34,51 @@ const content = [
   },
 ];
 
-export default function Offer({ isMonth, setIsMonth }) {
+export default function Offer({ isMonth }) {
   return (
     <MainDiv>
       {content.map((item, index) => {
+        const middle = index === 1;
+        const first = index === 0;
+        const third = index === 2;
+
+        const backgroundColor = middle
+          ? "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          : "#FFFFFF";
+
+        const text = middle ? "#FFFFFF" : "#6E728E";
+        const buttonBackground = middle
+          ? "#FFFFFF"
+          : "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)";
+        const buttonText = middle ? "#6D72DE" : "#FFFFFF";
+
         return (
           <OfferDiv
             key={Math.random()}
-            bg={
-              index === 1
-                ? "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
-                : "#FFFFFF"
-            }
-            pad={index === 1 ? "54.5px" : "31px"}
+            bg={backgroundColor}
+            pad={middle ? "54.5px" : "31px"}
           >
-            <OfferTitle cl={index === 1 ? "#FFFFFF" : "#6E728E"}>
-              {item.title}
-            </OfferTitle>
+            <OfferTitle cl={text}>{item.title}</OfferTitle>
             <PriceDiv>
-              <Dollar cl={index === 1 ? "#FFFFFF" : "#6E728E"}>$</Dollar>
-              <Price cl={index === 1 ? "#FFFFFF" : "#6E728E"}>
-                {index === 0 ? (isMonth ? "19.99" : "199.99") : null}
-                {index === 1 ? (isMonth ? "24.99" : "249.99") : null}
-                {index === 2 ? (isMonth ? "39.99" : "399.99") : null}
+              <Dollar cl={text}>$</Dollar>
+              <Price cl={text}>
+                {first ? (isMonth ? "19.99" : "199.99") : null}
+                {middle ? (isMonth ? "24.99" : "249.99") : null}
+                {third ? (isMonth ? "39.99" : "399.99") : null}
               </Price>
             </PriceDiv>
-            <Hr bg={index === 1 ? "#FFFFFF" : "#6E728E"} />
-            <Prop cl={index === 1 ? "#FFFFFF" : "#6E728E"}>{item.gb}</Prop>
-            <Hr bg={index === 1 ? "#FFFFFF" : "#6E728E"} />
-            <Prop cl={index === 1 ? "#FFFFFF" : "#6E728E"}>{item.user}</Prop>
-            <Hr bg={index === 1 ? "#FFFFFF" : "#6E728E"} />
-            <Prop cl={index === 1 ? "#FFFFFF" : "#6E728E"}>{item.limit}</Prop>
-            <Hr bg={index === 1 ? "#FFFFFF" : "#6E728E"} />
+            <Hr bg={text} />
+            <Prop cl={text}>{item.gb}</Prop>
+            <Hr bg={text} />
+            <Prop cl={text}>{item.user}</Prop>
+            <Hr bg={text} />
+            <Prop cl={text}>{item.limit}</Prop>
+            <Hr bg={text} />
             <Butt
-              bg={
-                index !== 1
-                  ? "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
-                  : "#FFFFFF"
-              }
-              cl={index === 1 ? "#6D72DE" : "#FFFFFF"}
-              border={index === 1 ? "#FFFFFF" : "#6D72DE"}
-              clHover={index === 1 ? "#FFFFFF" : "#6D72DE"}
+              bg={buttonBackground}
+              cl={buttonText}
+              border={middle ? "#FFFFFF" : "#6D72DE"}
+              clHover={middle ? "#FFFFFF" : "#6D72DE"}
             >
               {item.butt}
             </Butt>

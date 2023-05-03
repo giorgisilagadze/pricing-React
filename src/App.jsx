@@ -10,7 +10,7 @@ function App() {
     <>
       <GlobalStyled />
       <Toggle isMonth={isMonth} setIsMonth={setIsMonth} />
-      <Offer isMonth={isMonth} setIsMonth={setIsMonth} />
+      <Offer isMonth={isMonth} />
     </>
   );
 }
